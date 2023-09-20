@@ -8,11 +8,23 @@ namespace H1_Breeding_station.View
 {
     internal class View
     {
+        /// <summary>
+        /// This method allows a custom message to be outputted to the console, using the message parameter.
+        /// </summary>
+        /// <param name="message"></param>
         internal void Message(string message)
         {
             Console.WriteLine(message);
         }
 
+        /// <summary>
+        /// This method outputs the whole menu screen.
+        /// It takes 3 parameters, which represents how many animals i have, of each type.
+        /// This method only gets called from the main controller, in the User() method.
+        /// </summary>
+        /// <param name="dogs"></param>
+        /// <param name="chickens"></param>
+        /// <param name="bunnies"></param>
         internal void Menu(int dogs, int chickens, int bunnies)
         {
             Console.WriteLine("----------------------------------------------------------\n");
@@ -31,62 +43,21 @@ namespace H1_Breeding_station.View
             Console.WriteLine(" 0. See all bunnies");
         }
 
+        /// <summary>
+        /// This method clears the console window.
+        /// </summary>
         internal void Clear()
         {
             Console.Clear();
         }
 
+        /// <summary>
+        /// This method returns a readline, which can be used to etiher gather input or just pause the program until the user presses enter.
+        /// </summary>
+        /// <returns></returns>
         internal string Readline()
         {
             return Console.ReadLine();
-        }
-
-        internal void colors(int i, string? animal)
-        {
-            if (animal == "bunny")
-            {
-                if (i % 2 == 0)
-                {
-                    Console.ForegroundColor = ConsoleColor.DarkBlue;
-                } 
-                else
-                {
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                }
-            }
-            else if (animal == "dog")
-            {
-                if (i % 2 == 0)
-                {
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
-                }
-                else
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                }
-            }
-            else if (animal == "chicken")
-            {
-                if (i % 2 == 0)
-                {
-                    Console.ForegroundColor = ConsoleColor.DarkRed;
-                }
-                else
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                }
-            }
-            else
-            {
-                if (i % 2 == 0)
-                {
-                    Console.ForegroundColor = ConsoleColor.DarkGray;
-                }
-                else
-                {
-                    Console.ForegroundColor = ConsoleColor.White;
-                }
-            }
         }
     }
 }

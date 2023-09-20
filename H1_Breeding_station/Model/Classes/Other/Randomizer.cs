@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace H1_Breeding_station.Model.Classes.Other
 {
+    /// <summary>
+    /// This class contains arrays which are used to assign semi-random values to objects.
+    /// It has an array for male names, female names and fur types.
+    /// </summary>
     internal class Randomizer
     {
         internal string[] maleNames =
